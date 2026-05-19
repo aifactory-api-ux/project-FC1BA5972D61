@@ -1,0 +1,126 @@
+# API_CONTRACT.md
+
+## Endpoints
+
+### POST /api/auth/register
+
+| Attribute         | Value                        |
+|-------------------|-----------------------------|
+| Method            | POST                        |
+| Path              | /api/auth/register          |
+| Auth Required     | No                          |
+| Request Body      | UserRegisterRequest         |
+| Response Body     | UserRegisterResponse        |
+| Status Codes      | 201, 400, 409               |
+
+#### Request Body: UserRegisterRequest
+
+| Field    | Type    | Required |
+|----------|---------|----------|
+| email    | string  | Yes      |
+| password | string  | Yes      |
+
+#### Response Body: UserRegisterResponse
+
+| Field | Type   |
+|-------|--------|
+| id    | int    |
+| email | string |
+
+---
+
+### POST /api/auth/login
+
+| Attribute         | Value                        |
+|-------------------|-----------------------------|
+| Method            | POST                        |
+| Path              | /api/auth/login             |
+| Auth Required     | No                          |
+| Request Body      | UserLoginRequest            |
+| Response Body     | UserLoginResponse           |
+| Status Codes      | 200, 401                    |
+
+#### Request Body: UserLoginRequest
+
+| Field    | Type    | Required |
+|----------|---------|----------|
+| email    | string  | Yes      |
+| password | string  | Yes      |
+
+#### Response Body: UserLoginResponse
+
+| Field        | Type   |
+|--------------|--------|
+| access_token | string |
+| token_type   | string ("bearer") |
+
+---
+
+### POST /api/auth/forgot-password
+
+| Attribute         | Value                        |
+|-------------------|-----------------------------|
+| Method            | POST                        |
+| Path              | /api/auth/forgot-password   |
+| Auth Required     | No                          |
+| Request Body      | UserForgotPasswordRequest   |
+| Response Body     | UserForgotPasswordResponse  |
+| Status Codes      | 200                         |
+
+#### Request Body: UserForgotPasswordRequest
+
+| Field | Type   | Required |
+|-------|--------|----------|
+| email | string | Yes      |
+
+#### Response Body: UserForgotPasswordResponse
+
+| Field   | Type   |
+|---------|--------|
+| message | string |
+
+---
+
+### POST /api/auth/reset-password
+
+| Attribute         | Value                        |
+|-------------------|-----------------------------|
+| Method            | POST                        |
+| Path              | /api/auth/reset-password    |
+| Auth Required     | No                          |
+| Request Body      | UserResetPasswordRequest    |
+| Response Body     | UserResetPasswordResponse   |
+| Status Codes      | 200, 400                    |
+
+#### Request Body: UserResetPasswordRequest
+
+| Field        | Type   | Required |
+|--------------|--------|----------|
+| token        | string | Yes      |
+| new_password | string | Yes      |
+
+#### Response Body: UserResetPasswordResponse
+
+| Field   | Type   |
+|---------|--------|
+| message | string |
+
+---
+
+### GET /api/auth/me
+
+| Attribute         | Value                        |
+|-------------------|-----------------------------|
+| Method            | GET                         |
+| Path              | /api/auth/me                |
+| Auth Required     | Yes (Authorization header)  |
+| Request Body      | None                        |
+| Response Body     | UserProfile                 |
+| Status Codes      | 200, 401                    |
+
+#### Response Body: UserProfile
+
+| Field | Type   |
+|-------|--------|
+| id    | int    |
+| email | string |

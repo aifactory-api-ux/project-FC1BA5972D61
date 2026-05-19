@@ -1,0 +1,27 @@
+# STATE.md
+## Completados
+- [x] ITEM-1: run_tests.sh — backend/auth-service (commit: pending)
+- [x] ITEM-2: run_tests.sh — backend/shared (commit: pending)
+- [x] ITEM-3: run_tests.sh — frontend (commit: pending)
+- [x] ITEM-4: run_tests.sh — infra (commit: pending)
+- [x] ITEM-5: Tests: backend/auth-service/tests/test_routes.py (commit: pending)
+- [x] ITEM-6: Tests: backend/shared/tests/test_security.py (commit: pending)
+- [x] ITEM-7: Tests: frontend/src/pages/RegisterPage.tsx (commit: pending)
+- [x] ITEM-8: Tests: frontend/src/api/auth.ts (commit: pending)
+- [x] ITEM-9: Tests: frontend/src/pages/LoginPage.tsx (commit: pending)
+- [x] ITEM-10: Tests: frontend/src/pages/ResetPasswordPage.tsx (commit: pending)
+- [x] ITEM-11: Tests: infra/run.sh (commit: pending)
+- [x] ITEM-12: Tests: infra/README.md (commit: pending)
+- [x] ITEM-13: Tests: infra/docker-compose.yml (commit: pending)
+- [x] ITEM-14: Foundation — shared types, interfaces, DB schemas, config (commit: pending)
+- [x] ITEM-15: Backend — authentication endpoints (register, login, password recovery) (commit: pending)
+- [x] ITEM-16: Backend — authentication controller logic (commit: pending)
+- [x] ITEM-17: Backend — email service for password recovery (commit: pending)
+- [x] ITEM-18: Backend — JWT authentication middleware (commit: pending)
+- [x] ITEM-19: Frontend — registration form/page (commit: pending)
+- [x] ITEM-20: Frontend — login form/page (commit: pending)
+- [x] ITEM-21: Frontend — forgot password form/page (commit: pending)
+- [x] ITEM-22: Frontend — reset password form/page (commit: pending)
+- [x] ITEM-23: Infrastructure & Deployment (commit: pending)
+## Pendientes
+## Fallos
